@@ -1,8 +1,36 @@
+# Git
 .git
+.github
+
+# Host dependencies and Yarn cache
+**/node_modules
 .yarn/cache
 .yarn/install-state.gz
-node_modules
-packages/*/src
-packages/*/node_modules
-plugins
-*.local.yaml
+.pnp.*
+
+# Host build output
+**/dist
+**/dist-types
+**/coverage
+**/*.tsbuildinfo
+
+# Local configuration and secrets
+**/*.local.yaml
+**/*.local.yml
+**/.env
+**/.env.*
+**/.npmrc
+**/*-credentials.yaml
+**/*-credentials.yml
+**/*.key
+**/*.pem
+**/*.p12
+**/*.pfx
+
+# Logs and temporary files
+**/*.log
+**/.DS_Store
+**/.cache
+**/playwright-report
+**/test-results
+**/e2e-test-report

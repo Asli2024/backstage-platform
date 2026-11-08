@@ -1,5 +1,5 @@
 app:
-  title: Scaffolded Backstage App
+  title: Platform Hub
   baseUrl: http://localhost:3000
 
   # Enable all packages by default, this will discover packages from packages/app/package.json
@@ -10,6 +10,8 @@ app:
     # The catalog is mounted at /catalog by default but is overridden here to
     # serve as the root page. To switch to the Home page, comment out the
     # catalog path override and uncomment the path override under page:home below.
+    - theme:app/light: false
+    - theme:app/dark: false
     - page:catalog:
         config:
           path: /
@@ -95,7 +97,7 @@ app:
               height: 4
 
 organization:
-  name: My Company
+  name: Platform Hub
 
 backend:
   # Used for enabling authentication, secret is shared by all backend plugins

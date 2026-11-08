@@ -1,0 +1,19 @@
+name: Backstage checks
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: backstage-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: Asli2024/platform-workflows/.github/workflows/backstage-ci.yml@main

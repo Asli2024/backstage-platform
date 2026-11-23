@@ -1,4 +1,3 @@
-
 /*
  * Platform Hub
  * Backstage Backend Configuration
@@ -28,9 +27,7 @@ backend.add(import('@backstage/plugin-techdocs-backend'));
 backend.add(import('@backstage/plugin-auth-backend'));
 
 // GitHub OAuth authentication provider
-backend.add(
-  import('@backstage/plugin-auth-backend-module-github-provider'),
-);
+backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
 
 // Software catalog
 backend.add(import('@backstage/plugin-catalog-backend'));

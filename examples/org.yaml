@@ -1,10 +1,9 @@
-
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: asli2024
   annotations:
-    github.com/user-id: "167139690"
+    github.com/user-id: '167139690'
 spec:
   profile:
     displayName: Platform Hub Admin

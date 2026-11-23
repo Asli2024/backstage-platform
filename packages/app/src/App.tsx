@@ -1,4 +1,3 @@
-
 import { createApp } from '@backstage/frontend-defaults';
 import { createFrontendModule } from '@backstage/frontend-plugin-api';
 import {
@@ -59,17 +58,18 @@ const themeModule = createFrontendModule({
 // GitHub OAuth sign-in
 const signInPage = SignInPageBlueprint.make({
   params: {
-    loader: async () => props => (
-      <SignInPage
-        {...props}
-        provider={{
-          id: 'github-auth-provider',
-          title: 'GitHub',
-          message: 'Sign in to Platform Hub using GitHub',
-          apiRef: githubAuthApiRef,
-        }}
-      />
-    ),
+    loader: async () => props =>
+      (
+        <SignInPage
+          {...props}
+          provider={{
+            id: 'github-auth-provider',
+            title: 'GitHub',
+            message: 'Sign in to Platform Hub using GitHub',
+            apiRef: githubAuthApiRef,
+          }}
+        />
+      ),
   },
 });
 
@@ -81,11 +81,5 @@ const authModule = createFrontendModule({
 
 // Platform Hub application
 export default createApp({
-  features: [
-    catalogPlugin,
-    navModule,
-    homeModule,
-    themeModule,
-    authModule,
-  ],
+  features: [catalogPlugin, navModule, homeModule, themeModule, authModule],
 });
